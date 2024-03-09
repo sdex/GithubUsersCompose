@@ -35,3 +35,8 @@ The UI layer comprises:
 ## Run application
 
 You need to set your own Github API token in the `AuthorizationInterceptor` class. 
+
+## Download application
+
+Note: It expires on Mon, Apr 8 2024. \
+[Download apk file](https://github.com/sdex/GithubUsersCompose/raw/main/apk/Github-app-release.apk)
