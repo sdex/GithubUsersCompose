@@ -8,6 +8,9 @@ import dev.sdex.github.domain.model.User
 import retrofit2.HttpException
 import java.io.IOException
 
+/**
+ * The paging source to use if we don't want to store all users in the database
+ */
 class UsersPagingSource(
     private val service: GithubService,
     private val userMapper: UserMapper,

@@ -7,9 +7,8 @@ The data flow is achieved using streams, implemented using Kotlin Flows.
 
 ## Data layer
 
-The data layer is implemented as an offline-first source of app data and business logic. 
-It is the source of truth for the list of the users.
-The details of users is cached using OkHttp cache for demonstration purposes. 
+The data layer is implemented as an offline-first source of app data and business logic.
+It is the source of truth for all data in the app.
 
 ## Domain layer
 

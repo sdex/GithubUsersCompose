@@ -10,5 +10,6 @@
     <string name="load_users_error">Failed to load users</string>
 
     <string name="accessibility_label_navigate_back">Navigate back</string>
+    <string name="accessibility_label_info">Info</string>
     <string name="accessibility_label_profile_picture">Profile picture of %1$s</string>
 </resources>

@@ -5,8 +5,9 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import dev.sdex.github.domain.model.User
+import dev.sdex.github.domain.model.UserDetails
 
-@Database(entities = [User::class], version = 1, exportSchema = false)
+@Database(entities = [User::class, UserDetails::class], version = 1, exportSchema = false)
 abstract class UsersDatabase : RoomDatabase() {
 
     abstract fun userDao(): UserDao

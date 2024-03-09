@@ -38,8 +38,15 @@ class UserRepositoryImpl(
 
     override fun getUser(username: String): Flow<Result<UserDetails>> = flow {
         try {
-            val userDetails = service.getUser(username = username)
-            emit(Result.success(userMapper.map(userDetails)))
+            val existingUser = database.userDao().getUserDetails(username = username)
+            if (existingUser != null) {
+                emit(Result.success(existingUser))
+                return@flow
+            }
+            val user = service.getUser(username = username)
+            val userDetails = userMapper.map(user)
+            database.userDao().insert(userDetails)
+            emit(Result.success(userDetails))
         } catch (e: IOException) {
             emit(Result.failure(e))
         } catch (e: HttpException) {

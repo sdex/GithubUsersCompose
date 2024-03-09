@@ -1,10 +1,13 @@
 package dev.sdex.github.domain.model
 
 import androidx.annotation.Keep
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 
 @Keep
+@Entity(tableName = "user_details")
 data class UserDetails(
-    val id: Int,
+    @PrimaryKey val id: Int,
     val login: String,
     val avatarUrl: String? = null,
     val name: String? = null,
