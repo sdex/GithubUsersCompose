@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Github</string>
+    <string name="name">"Name: "</string>
+    <string name="company">"Company: "</string>
+    <string name="location">"Location: "</string>
+    <string name="public_repos">"Public repos: "</string>
+    <string name="bio">"Bio: "</string>
+    <string name="unknown">N/A</string>
+    <string name="load_profile_error">Failed to load profile details</string>
+    <string name="load_users_error">Failed to load users</string>
+
+    <string name="accessibility_label_navigate_back">Navigate back</string>
+    <string name="accessibility_label_profile_picture">Profile picture of %1$s</string>
+</resources>
