@@ -33,7 +33,8 @@ The UI layer comprises:
 
 ## Run application
 
-You need to set your own Github API token in the `AuthorizationInterceptor` class. 
+You need to set your own Github API token in the `AuthorizationInterceptor` class. \
+Create the token: https://github.com/settings/tokens
 
 ## Download application
 
