@@ -1,7 +1,9 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("org.jetbrains.kotlin.plugin.serialization")
     id("kotlin-kapt")
+    id("kotlin-parcelize")
 }
 
 android {
@@ -58,7 +60,7 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:$lifecycle_version")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version")
     implementation("androidx.lifecycle:lifecycle-runtime-compose:$lifecycle_version")
-    val nav_version = "2.7.7"
+    val nav_version = "2.8.0-beta01"
     implementation("androidx.navigation:navigation-compose:$nav_version")
     implementation("androidx.activity:activity-compose:1.9.0")
     val paging_version = "3.3.0"
@@ -84,6 +86,7 @@ dependencies {
     implementation("io.insert-koin:koin-androidx-compose:3.5.0")
     implementation("com.jakewharton.timber:timber:5.0.1")
     implementation("io.coil-kt:coil-compose:2.6.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.3")
 
     testImplementation("org.junit.jupiter:junit-jupiter:5.8.2")
     testImplementation("org.mockito:mockito-core:5.10.0")

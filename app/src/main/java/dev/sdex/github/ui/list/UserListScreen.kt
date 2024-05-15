@@ -35,7 +35,7 @@ import androidx.paging.compose.itemKey
 import coil.compose.AsyncImage
 import dev.sdex.github.R
 import dev.sdex.github.domain.model.User
-import dev.sdex.github.ui.navigation.Screen
+import dev.sdex.github.ui.navigation.Route
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -54,9 +54,11 @@ fun UserListScreen(
                     Text(text = stringResource(id = R.string.app_name))
                 },
                 actions = {
-                    IconButton(onClick = {
-                        navHostController.navigate(Screen.Profile.route + "/sdex")
-                    }) {
+                    IconButton(
+                        onClick = {
+                            navHostController.navigate(Route.Profile("sdex"))
+                        },
+                    ) {
                         Icon(
                             imageVector = Icons.Outlined.Info,
                             contentDescription = stringResource(id = R.string.accessibility_label_info),
@@ -82,7 +84,7 @@ fun UserListScreen(
                 if (item != null) {
                     UserItem(
                         user = item,
-                        onClick = { navHostController.navigate(Screen.Profile.route + "/${item.login}") },
+                        onClick = { navHostController.navigate(Route.Profile(item.login)) },
                     )
                 }
             }
