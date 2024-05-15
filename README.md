@@ -33,10 +33,6 @@ The UI layer comprises:
 
 ## Run application
 
-You need to set your own Github API token in the `AuthorizationInterceptor` class. \
+You need to set your own Github API token in the [`AuthorizationInterceptor`](https://github.com/sdex/GithubUsersCompose/blob/main/app/src/main/java/dev/sdex/github/data/source/remote/AuthorizationInterceptor.kt#L7) class. \
 Create the token: https://github.com/settings/tokens
 
-## Download application
-
-Note: It expires on Mon, Apr 8 2024. \
-[Download apk file](https://github.com/sdex/GithubUsersCompose/releases/tag/1.0)
